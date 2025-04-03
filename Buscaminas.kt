@@ -3,7 +3,7 @@ fun check(f:Int, c:Int, m: Int) {
     if (m >= (f * c)) { throw Exception("El numero de minas es demasiado grande") }
 }
 
-fun jugar(campo:Campo, f: Int, c:Int, m:Int) {
+fun jugar(campo:Campo, m:Int) {
     var minas = m
     while (minas != 0) {
         println("Comienza el juego")
@@ -57,5 +57,5 @@ fun bandera(campo: Campo):Boolean {
 class Buscaminas (f: Int, c:Int, m:Int) {
     var C=check(f,c,m)
     var Campo= Campo(f,c,m)
-    var juego= jugar(Campo,f,c,m)
+    var juego= jugar(Campo,m)
 }
